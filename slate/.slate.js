@@ -27,9 +27,6 @@ var pushBottom = slate.operation("push", {
 
 
 
-
-
-// Bind A Crazy Function to 1+ctrl
 slate.bnda({
 
 	"f:cmd,shift,space": fullscreen,

@@ -1,3 +1,11 @@
+function nextScreen() {
+	var current = slate.screen(),
+		found = false,
+		first;
+}
+
+
+
 var fullscreen = slate.operation("move", {
     "x": "screenOriginX",
     "y": "screenOriginY",
@@ -26,6 +34,12 @@ var pushBottom = slate.operation("push", {
 });
 
 
+var doThrow = slate.operation("throw", {
+	"screen" : "next",
+	"width" : "screenSizeX",
+	"height" : "screenSizeY"
+});
+
 
 slate.bnda({
 
@@ -33,7 +47,8 @@ slate.bnda({
 	"up:cmd,shift,space": pushTop,
 	"left:cmd,shift,space": pushLeft,
 	"right:cmd,shift,space": pushRight,
-	"down:cmd,shift,space": pushBottom
+	"down:cmd,shift,space": pushBottom,
+	"t:cmd,shift,space": doThrow
 
 
 });
